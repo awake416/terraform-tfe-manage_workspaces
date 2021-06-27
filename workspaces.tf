@@ -1,28 +1,6 @@
-variable terraform_organization {
-  default = "awake416"
-}
-
-variable region {
-  default = "us-east-1"
-}
-
-variable env {}
-
-terraform {
-  backend remote {
-    hostname = "app.terraform.io"
-    organization = "awake416"
-
-    workspaces {
-      name = "manage_aws_organization_workspace_setup"
-    }
-  }
-}
-
-provider tfe {}
 
 locals {
-  prefix = "manage_aws_organizations"
+  prefix = var.prefix
   workspace_name = join("", [local.prefix, "-", var.env])
   working_directory = join("/", [local.prefix, var.env])
 }
