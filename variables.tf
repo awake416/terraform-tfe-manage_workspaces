@@ -1,10 +1,7 @@
-variable "aws_access_key_id" {
-  default = ""
-}
-
-variable "aws_secret_access_key" {
-  default = ""
-}
+variable aws_access_key_id {}
+variable aws_secret_access_key {}
+variable oauth_token_id {}
+variable env {}
 
 variable prefix {
   type = string
@@ -18,6 +15,6 @@ variable region {
   default = "us-east-1"
 }
 
-variable env {}
-
-provider tfe {}
+variable working_dir {
+  default = ""
+}
