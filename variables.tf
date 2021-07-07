@@ -7,6 +7,10 @@ variable prefix {
   type = string
 }
 
+variable "workspace_exec_mode" {
+  default = "remote"
+}
+
 variable terraform_organization {
   default = "awake416"
 }
