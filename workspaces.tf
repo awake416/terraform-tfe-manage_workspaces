@@ -1,3 +1,4 @@
+
 locals {
   prefix = var.prefix
   workspace_name = join("", [
@@ -5,7 +6,7 @@ locals {
     "-",
     var.env])
   working_directory = var.working_dir == "" ? "./" : var.working_dir
-  execution_mode = var.env == "dev" ? "local" : "remote"
+  execution_mode = var.workspace_exec_mode == "local" ? "local" : "remote"
 }
 
 resource tfe_workspace workspace {
