@@ -39,3 +39,11 @@ resource tfe_variable aws_secret_access_key {
   workspace_id = tfe_workspace.workspace.id
   sensitive = true
 }
+
+resource tfe_variable env {
+  key = "env"
+  value = var.env
+  category = "terraform"
+  description = "environment "
+  workspace_id = tfe_workspace.workspace.id
+}
