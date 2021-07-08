@@ -7,7 +7,7 @@ variable prefix {
   type = string
 }
 
-variable "workspace_exec_mode" {
+variable workspace_exec_mode {
   default = "remote"
 }
 
@@ -21,4 +21,8 @@ variable region {
 
 variable working_dir {
   default = ""
+}
+
+variable default_branch {
+  default = "main"
 }

@@ -19,6 +19,7 @@ resource tfe_workspace workspace {
   vcs_repo {
     identifier = join("/", [var.terraform_organization, var.prefix])
     oauth_token_id = var.oauth_token_id
+    branch = var.default_branch
   }
 }
 
