@@ -24,3 +24,12 @@ module manage_workspaces {
   aws_secret_access_key = var.aws_secret_access_key
 }
 ````
+
+### workspace exec modes
+By default TFC sets execution mode of a workspace to remote and the workspace gets initialized during ``terraform init``
+A script has been packaged which can be used to set the exec mode to local 
+````shell
+Usage - python3 set_local_exec_mode.py <organization> <workspace_name>
+$ python3 set_local_exec_mode.py awake416 manage_aws_account_baseline_workspace_setup
+
+````
